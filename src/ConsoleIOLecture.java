@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class ConsolIOLecture {
+public class ConsoleIOLecture {
           public static void main(String[] args) {
               System.out.println("Hello Ganymede");
               //if you select a word in sout and hit cmd b it'll open up an external library file that tells you how this code operates
