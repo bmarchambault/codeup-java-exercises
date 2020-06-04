@@ -3,19 +3,18 @@ import java.util.Scanner;
 public class ControlFlowExercises {
 	public static void main(String[] args) {
 
-//
 //        While
 //
 //        Create an integer variable i with a value of 5.
 //        Create a while loop that runs so long as i is less than or equal to 15
 //        Each loop iteration, output the current value of i, then increment i by one.
 //        Your output should look like this:
-//
 //        5 6 7 8 9 10 11 12 13 14 15
+
 // int i = 5;
 
 //while (i <= 15){
-//    System.out.println(i);
+//    System.out.print(i + " ");
 //    i++;
 //        }
 
@@ -24,11 +23,13 @@ public class ControlFlowExercises {
 //
 //        Create a do-while loop that will count by 2's starting with 0 and ending at 100. Follow each number with a new line.
 
+        //try writing the while first so you know when your stopping point is
+
 //int i = 0;
 //
 //do  {
-//    System.out.println(i);
-//    i+=2;
+//    System.out.println(j);
+//    i += 2;
 //} while (i <= 100);
 
 //        Alter your loop to count backwards by 5's from 100 to -10.
@@ -46,7 +47,7 @@ public class ControlFlowExercises {
 //        16
 //        256
 //        65536
-//this didn't work with int because it wasn't the right range.
+//this didn't work with int because it wasn't the right range. even though 65536 is less than a mil, the operation of squaring it still happens.  You'll get zeros with int due to this because int isn't big enough to hold the last operation.  it ensure that the data type stays a long use:  long i = 2L;
 //long i = 2;
 //
 //do  {
@@ -85,7 +86,7 @@ public class ControlFlowExercises {
 //        For numbers which are multiples of both three and five: print “FizzBuzz”.
 
 //for (int i = 1; i<= 100; i++){
-//    if (i % 3 == 0 && 1 % 5 == 0){
+//    if (i % 3 == 0 && 1 % 5 == 0){//or if( i % 15 === 0)
 //        System.out.println("Fizz Buzz");
 //    } else if (i % 5 == 0){
 //        System.out.println("Buzz");
@@ -118,18 +119,32 @@ public class ControlFlowExercises {
 //                4      | 16      | 64
 //               5      | 25      | 125
 		Scanner sc = new Scanner(System.in);
-//        System.out.println("What number would you like to go up to? ");
-//        int userInput = sc.nextInt();
-//        System.out.println("Here is your table!");
-//        System.out.println("number | squared | cubed");
-//        System.out.println("------ | ------- | -----");
-//        for (int i = 1; i <= userInput; i++) {
-////            int square = i * i;
-////            int cubed =  i * (i * i);
-//            System.out.print(i);
-//            System.out.print(" | " + (i * i));
-//            System.out.print(" | " + (i * i * i) );
-//            System.out.println();
+//        String answer1 = "";
+//        System.out.println("would you like to make a math table? : (Y/N)");
+//        answer1 = sc.next();
+//        if (answer1.equalsIgnoreCase("y") ) {
+//            System.out.println("What number would you like to go up to? ");
+//            int userInput = sc.nextInt();
+//            System.out.println("Here is your table!");
+//            System.out.println("number | squared | cubed");
+//            System.out.println("------ | ------- | -----");
+//            for (int i = 1; i <= userInput; i++) {
+//                if (i * i <= 10) {
+//                    System.out.print(i);
+//                    System.out.print("      | " + (i * i));
+//                    System.out.print("       | " + (i * i * i));
+//                    System.out.println();
+        //   //alternatively:  sout (i + "       | " + (i * i) + "        | " + (i * i * i));
+        //  // another alt  souf("%d        | %d           | %d%n", i, i*i, i*i*i);
+//                } else {
+//                    System.out.print(i);
+//                    System.out.print("      | " + (i * i));
+//                    System.out.print("      | " + (i * i * i));
+//                    System.out.println();
+//                }
+//            }
+//        }else{
+//            System.out.println("ok, maybe next time.");
 //        }
 
 //        Convert given number grades into letter grades.
@@ -146,31 +161,29 @@ public class ControlFlowExercises {
 //        C : 79 - 67
 //        D : 66 - 60
 //        F : 59 - 0
-String answer = "";
 
-		System.out.println("Enter your grade 0-100");
-		int userInput = sc.nextInt();
-		System.out.println("A : 100 - 88");
-		System.out.println("B : 87 - 80");
-		System.out.println("C : 79 - 67");
-		System.out.println("D : 66 - 60");
-		System.out.println("F : 59 - 0");
-		System.out.println("Do you agree to these grade ranges: (Y/N)");
-	   answer = sc.next();
-   if (answer.equalsIgnoreCase("y") ){
-        String msg = "Your letter grade is: ";
-        if (userInput >= 88) {
-            System.out.println(msg + "A");
-        } else if (userInput <= 87 && userInput >= 80) {
-            System.out.println(msg + "B");
-        } else if (userInput <= 79 && userInput >= 67) {
-            System.out.println(msg + "C");
-        } else if (userInput <= 66 && userInput >= 60) {
-            System.out.println(msg + "D");
-        } else {
-            System.out.println(msg + "F");
-        }
-    }
+//String answer = "";
+//      System.out.println("Would you like to see your letter grade?  (Y/N)");
+//        answer = sc.next();
+//        if (answer.equalsIgnoreCase("y") ){
+//		System.out.println("Enter your grade 0-100");
+//		int userGradeInput = sc.nextInt();
+//        String msg = "Your letter grade is: ";
+//        if (userGradeInput >= 88) {
+//            System.out.println(msg + "A");
+//        } else if (userGradeInput <= 87 && userGradeInput >= 80) {
+//            System.out.println(msg + "B");
+//        } else if (userGradeInput <= 79 && userGradeInput >= 67) {
+//            System.out.println(msg + "C");
+//        } else if (userGradeInput <= 66 && userGradeInput >= 60) {
+//            System.out.println(msg + "D");
+//        } else {
+//            System.out.println(msg + "F");
+//        }
+//
+//    }else{
+//            System.out.println("No problem, have a great day");
+//        }
 
 //		if (answer.equalsIgnoreCase("y") ) {
 //			int[] arrayForA = {99, 98, 97, 96, 95, 94, 93, 92, 91, 90, 89, 88};
