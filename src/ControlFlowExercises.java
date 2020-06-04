@@ -118,7 +118,7 @@ public class ControlFlowExercises {
 //               3      | 9       | 27
 //                4      | 16      | 64
 //               5      | 25      | 125
-		Scanner sc = new Scanner(System.in);
+//		Scanner sc = new Scanner(System.in);
 //        String answer1 = "";
 //        System.out.println("would you like to make a math table? : (Y/N)");
 //        answer1 = sc.next();
@@ -218,11 +218,34 @@ public class ControlFlowExercises {
 //                }
 //          }
 
+//Sophies walkthrough:
+        Scanner userInput = new Scanner(System.in);
+        String answer = "";
 
-
-
-
-
+//        System.out.println("Would you like to see your letter grade? (y/n)");
+//        answer = userInput.next();
+//while(answer.equalsIgnoreCase("y")){
+//    System.out.println("Please enter the numeric grade:");
+//    int grade = userInput.nextInt();
+//    char letterGrade;
+//    if(grade >= 88){
+//        letterGrade = 'A';
+//    }else if(grade >= 80){
+//        letterGrade = 'B';
+//    }else if(grade >= 67){
+//        letterGrade = 'C';
+//    }else if (grade >= 60){
+//        letterGrade = 'D';
+//    } else {
+//        letterGrade = 'F';
+//    }
+//    System.out.printf("Your letter grade is:  %c.%n", letterGrade);
+//    System.out.println("Do you want to check more grades?");
+//    answer = userInput.next();
+//}
+//
+//
+//
 
 
 //=========end==don't delete======================
