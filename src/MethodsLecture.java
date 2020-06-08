@@ -1,5 +1,6 @@
 public class MethodsLecture {
 
+
 //  METHODS
 
 /*
@@ -61,4 +62,19 @@ public class MethodsLecture {
 
 // HINT: you may need an additional method using a for loop to actually print
 // each number
+
+public status String helloWorld(){
+    System.out.println("Hello World");
+    return "Hello World!"
+    }
+
+public status void greetCohorts(String greeting, String cohort){
+//return greeting + " " + cohort;
+System.out.println(greeting + " " + corhort);
+
+public status void main (String[] args) {
+greetingCohort("Goodmorning", "Ganymede");
+
+}
+
 }
