@@ -1,4 +1,4 @@
-import org.w3c.dom.ls.LSOutput;
+
 
 import java.util.Scanner;
 
@@ -12,7 +12,7 @@ public class MethodsExercises {
 //        System.out.println(division(45, 9));
 //        System.out.println(remainderOf(13, 2));
 //        getInteger(1, 10);
-//        calFactorial(1, 10);
+        calFactorial(1, 10);
 //        rollDice(1, 10);
 
     }
@@ -52,19 +52,19 @@ public class MethodsExercises {
                 //          int userInput = getInteger(1, 10);
 
 
-//    public static int getInteger(int min, int max) {
-//        System.out.println("enter an number between 1 and 10: ");
-//        int userInput = sc.nextInt();
-//        if (userInput > min && userInput < max) {
-////            System.out.println(userInput);
-//            System.out.println("Thank You. ");
-//            return userInput;
-//
-//        } else{
-//            System.out.println("That is not a valid number, please enter a number between 1 and ten");
-//           return getInteger(min, max);
-//        }
-//    }
+    public static int getInteger(int min, int max) {
+        System.out.println("enter an number between 1 and 10: ");
+        int userInput = sc.nextInt();
+        if (userInput > min && userInput < max) {
+//            System.out.println(userInput);
+            System.out.println("Thank You. ");
+            return userInput;
+
+        } else{
+            System.out.println("That is not a valid number, please enter a number between 1 and ten");
+           return getInteger(min, max);
+        }
+    }
 
                 //    3:  Calculate the factorial of a number.
                 //
@@ -84,23 +84,23 @@ public class MethodsExercises {
                 //3! = 1 x 2 x 3       = 6
                 //4! = 1 x 2 x 3 x 4   = 24
 
-//    public static long calFactorial(int min, int max) {
-//        String answer;
-//        long result = 1;
-//        int userInteger = getInteger(min, max);
-//        System.out.println("Would you like to see the factorial for your number? (y/n)");
-//         answer = sc.next();
-//            if (answer.equalsIgnoreCase("y") || answer.equalsIgnoreCase("yes")){
-//                for(int i = 1; i<=userInteger; i++){
-//                    result = result *i;
-//                }
-//            } else{
-//                System.out.println("ok, another time");
-//            }
-//        System.out.println(result);
-//        return result;
-//
-//    }
+    public static long calFactorial(int min, int max) {
+        String answer;
+        long result = 1;
+        int userInteger = getInteger(min, max);
+        System.out.println("Would you like to see the factorial for your number? (y/n)");
+         answer = sc.next();
+            if (answer.equalsIgnoreCase("y") || answer.equalsIgnoreCase("yes")){
+                for(int i = 1; i<=userInteger; i++){
+                    result = result *i;
+                }
+            } else{
+                System.out.println("ok, another time");
+            }
+        System.out.println(result);
+        return result;
+
+    }
 
             // 4:  Create an application that simulates dice rolling.
             //
@@ -139,29 +139,7 @@ public class MethodsExercises {
 //    return dieOne & dieOne;
 //}
 
-//5  Game Development 101
 //
-//Welcome to the world of game development!
-//
-//You are going to build a high-low guessing game. Create a class named HighLow inside of src.
-//
-//The specs for the game are:
-//
-//Game picks a random number between 1 and 100.
-//Prompts user to guess the number.
-//All user inputs are validated.
-//If user's guess is less than the number, it outputs "HIGHER".
-//If user's guess is more than the number, it outputs "LOWER".
-//If a user guesses the number, the game should declare "GOOD GUESS!"
-//Hints
-//
-//Use the random method of the java.lang.Math class to generate a random number.
-//Bonus
-//
-//Keep track of how many guesses a user makes.
-//Set an upper limit on the number of guesses.
-
-
 
 
 
