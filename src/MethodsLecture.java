@@ -1,18 +1,26 @@
 public class MethodsLecture {
     //call all your methods here since this is the entry point.  it doesn't matter if this is at the top or the bottom.
     public static void main(String[] args) {
-//        greetCohorts("Goodmorning", "Ganymede");
+//       //        invokes version 1
 //        orderFood();
-//        orderFood("salad");
-//        orderFood("pancakes", 3);
-//        orderFood("sushi", "tempura");
+////        invokes version 2
+//        orderFood("Pizza");
+////        invokes version 3
+//        orderFood("Burgers", 3);
+////        invokes version 4
+//        orderFood("Sushi","Ramen");
+//
+//        favoriteSong("Vienna - Billy Joel");
 //        weeksIn(12);
-        System.out.println(getPower(3, 5));
-        //3 * getPower(3,4)
-        //3*3 * getPower(3,3)
-        //3*3*3*getpower(3,2)
-        //3*3*3*3*3 <-- final result
-        count(5);
+//        String myGreeting = "Good Day";
+//        String cohort = "Olympic";
+//
+////        System.out.println(args);
+//        greetCohort("Good Morning","Ganymede");
+//        greetCohort("Hello", "Fortuna");
+//        greetCohort(myGreeting,"Deimos");
+//        greetCohort(myGreeting,cohort);
+//        System.out.println(helloWorld());
     }
 //public static long getPower(int base, int exponent) { 
 // if (exponent == 0) { 
@@ -52,7 +60,9 @@ public class MethodsLecture {
     TO DO: Write a public static method called favoriteSong that prints
     your favorite song.
  */
-
+public static void favoriteSong(String song){
+    System.out.println("My favorite song is: " + song);
+}
 /*
     TO DO: Write a public static method called weeksIn that prints
     message saying how many weeks you've been at Codeup.
