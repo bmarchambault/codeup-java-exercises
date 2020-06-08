@@ -50,32 +50,32 @@ Write the Java code necessary so that a user of your command line application ca
 //        }
 //
 
-        //SOPHIES WALKTHROUGH
-        Scanner sc = new Scanner (System.in).useDelimiter("\n");
-        System.out.println("if you want to talk to Bob, say hi!");
-
-String userInput;
-boolean greeting;
-//BUILD THIS FIRST
+//        //SOPHIES WALKTHROUGH
+//        Scanner sc = new Scanner (System.in).useDelimiter("\n");
+//        System.out.println("if you want to talk to Bob, say hi!");
 //
-//do{
-//    userInput = sc.next();
+//String userInput;
+//boolean greeting;
+////BUILD THIS FIRST
+////
+////do{
+////    userInput = sc.next();
+////    greeting = (!userInput.equals("bye"));
+////}while(greeting);
+//        do{
+//        userInput = sc.next();
 //    greeting = (!userInput.equals("bye"));
+//    if (userInput.endsWith("?")){
+//        System.out.println("Sure");
+//    }else if(userInput.endsWith("!")){
+//                System.out.println("Whoa, chill out");
+//    }else if(userInput.equals("")){
+//                System.out.println("Fine. Be that way!");
+//            }else{
+//            System.out.println("Whatever!");
+//        }
+//
 //}while(greeting);
-        do{
-        userInput = sc.next();
-    greeting = (!userInput.equals("bye"));
-    if (userInput.endsWith("?")){
-        System.out.println("Sure");
-    }else if(userInput.endsWith("!")){
-                System.out.println("Whoa, chill out");
-    }else if(userInput.equals("")){
-                System.out.println("Fine. Be that way!");
-            }else{
-            System.out.println("Whatever!");
-        }
-
-}while(greeting);
 
 //        ========================end, don't delete=========================
     }
