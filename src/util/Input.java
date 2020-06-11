@@ -5,7 +5,7 @@ public class Input {
     private  Scanner scanner;//private property of scanner
     //   When an instance of this object (Input object) is created,
     // the scanner property should be set to a new instance of the Scanner class.
-    public Input(){//constuctor for input
+    public Input(){//constructor for input
         this.scanner = new Scanner(System.in);//creates a new instance of the scanner property
     }
 
