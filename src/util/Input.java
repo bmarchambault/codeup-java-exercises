@@ -1,7 +1,7 @@
 package util;
 import java.util.Scanner;
 import java.util.jar.JarOutputStream;
-
+//kjfld
 //    Create a class named Input that has a private property named scanner.
 public class Input {
     private  Scanner scanner;//private property of scanner
