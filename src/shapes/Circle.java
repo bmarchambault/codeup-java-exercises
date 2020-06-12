@@ -1,3 +1,5 @@
+package shapes;
+
 public class Circle {
     private double radius;
 //    private double PI = Math.PI;
@@ -12,7 +14,7 @@ public class Circle {
     }
 
     public double getCircumference () {
-        return (radius * 2) * Math.PI;
+        return 2 * Math.PI * radius;
     }
 
 }
