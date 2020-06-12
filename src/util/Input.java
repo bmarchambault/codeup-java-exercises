@@ -22,6 +22,10 @@ public class Input {
         return scanner.nextLine();//next line vs next because this allows the user to type in more than just a word.  again, for a broader use case of getting a string.
     }
 
+    public String getString(String prompt) {
+        System.out.println(prompt);
+        return scanner.nextLine();
+    }
 
 
 
@@ -154,7 +158,7 @@ public class Input {
 
 
 }
-}
+//}
 //Create a package inside of src named util. Inside of util, create a class named Input that has a private property named scanner. When an instance of this object is created, the scanner property should be set to a new instance of the Scanner class. The class should have the following methods, all of which return command line input from the user:
 //
 //String getString()
