@@ -20,6 +20,13 @@ public class Person {
         this.firstName = firstName;
     }
 
+    public String getFirstName() {
+        return this.firstName;
+    }
+    public String getLastName() {
+        return this.lastName;
+    }
+
     //because there are no set parameters, theres no difference between this.name and name.  but this.name is best practice in case two strings happen to be the same i.e. there's more than one Cathy
 //    public String getName() {
 //        return this.name;
