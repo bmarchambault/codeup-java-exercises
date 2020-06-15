@@ -1,4 +1,4 @@
-package inheritanceMiniExercise;
+package inheritanceLecture;
 
 public class Vehicle {
     protected boolean isOperable;
@@ -7,6 +7,9 @@ public class Vehicle {
 
     protected Vehicle(){
 
+    }
+    public void turnOn(){
+        System.out.println("Vehicle is turning on...");
     }
 
     protected Vehicle(boolean isOperable, int passengerCapacity, String powerSource){
@@ -65,3 +68,31 @@ public class Vehicle {
 //  - a constructor that calls the vehicle constructor to set all of the inherited fields and sets the maximumAltitude √
 //  - add getters and setters for maximumAltitude √
 //  - add a .toString() method with IntelliJ
+//
+//-- !! MINI-EXERCISE 3 !!
+//In your Vehicle class, experiement with changing the visibility of the three instance properties to see how they are directly accessible or not through the Jet and Car objects. Add a seperate package for for the Vehicle class called vehicle and add a seperate package for the Jet and Car classes called jetCar. Experiement with package private visibility and protected visibility of properties in the vehicle class and see if you can determine how it works in the jetCar package.
+//After experimenting with visibility, change the vehicle property visibility to private, move the Vehicle, Jet, and Car classes back out directly into src, and delete the vehicle and jetCar packages.
+
+//-- !! MINI-EXERCISE 4 !!
+//In your Vehicle class, add a void method, turnOn(), that prints the message "Vehicle is turning on...".
+//In your Jet class, override the turnOn() method to print the message "Igniting jet engines..."
+//In your Car class, override the turnOn() method to print the message "Cranking engine..."
+//In our vehicle test class, add a method, turn on vehicles, that takes in an array of vehicles and invokes the turnOn() method for all of them.
+
+
+//----------------- SUPER AND FINAL KEYWORDS
+//Super keyword uses...
+//  - when used in a subclass method other than a constructor, it allows the subclass method to invoke the parent class method implementation
+//  - when used in a subclass constructor, will invoke a parent constructor but has to be the first statement within the subclass constructor
+//Final keyword uses...
+//  - when used on a class, it prevents any classes from extending from it
+//  - when used on a method, the method cannot be overwritten
+//  - when used on a property, it creates a constant
+
+
+//-- !! MINI-EXERCISE 5 !!
+//Add a method of genericTurnOn to both the Jet class and the Car class (not the Vehicle class). When invoked, it should print out "Vehicle is turning on...". How can the parent version of the turnOn method be used to do this?
+//Experiment with the three uses for the final keyword using the Vehicle and Car classes. These three uses again are...
+//  1. Create a constant
+//  2. Prevent method overriding
+//  3. Prevent inheritance (edited)
