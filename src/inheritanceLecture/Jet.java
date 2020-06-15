@@ -1,6 +1,4 @@
-package inheritanceMiniExercise;
-
-import inheritanceMiniExercise.Vehicle;
+package inheritanceLecture;
 
 public class Jet extends Vehicle {
     private int maxAltitude;
@@ -9,6 +7,11 @@ public class Jet extends Vehicle {
         super(isOperable, passengerCapacity, powerSource);
         this.maxAltitude = maxAltitude;
     }
+
+    public void turnOn(){
+        System.out.println("Igniting jet engines...");
+    }
+
 
     public void setMaxAltitude(int maxAltitude){
         this.maxAltitude = maxAltitude;
