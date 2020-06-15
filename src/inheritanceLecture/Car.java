@@ -1,4 +1,4 @@
-package inheritanceMiniExercise;
+package inheritanceLecture;
 
 public class Car extends Vehicle {
     private int milesPerGallon;
@@ -7,6 +7,11 @@ public class Car extends Vehicle {
         super(isOperable, passengerCapacity, powerSource);
         this.milesPerGallon = milesPerGallon;
     }
+
+    public void turnOn(){
+        System.out.println("Cranking engine...");
+    }
+
 
 public void setMilesPerGallon(int milesPerGallon){
         this.milesPerGallon = milesPerGallon;
