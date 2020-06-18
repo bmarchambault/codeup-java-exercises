@@ -27,7 +27,10 @@ public class Input {
         return scanner.nextLine();
     }
 
-
+    public String getWord(String prompt) {
+        System.out.println(prompt);
+        return scanner.next();
+    }
 
     public boolean yesNo(){
         String input = scanner.next();//only needs to be next because the user will only enter a word or character.
@@ -38,6 +41,26 @@ public class Input {
         }else{
 //            System.out.println("yesNo worked with no");//sout in case of error.
             return false;
+        }
+    }
+
+    public boolean yesNo(String prompt){
+        System.out.println(prompt);
+        String input = scanner.next();
+        if(input.equalsIgnoreCase("y") || input.equalsIgnoreCase("yes")){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
+    public int getInt(String prompt) {
+        System.out.println(prompt);
+        if (scanner.hasNextInt()) {
+            return scanner.nextInt();
+        } else {
+            System.out.println("invalid input.  Enter a valid integer.");
+            return getInt();//recurrsive.  but a loop works fine too.
         }
     }
 
