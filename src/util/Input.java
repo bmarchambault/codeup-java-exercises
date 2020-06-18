@@ -29,7 +29,7 @@ public class Input {
 
     public String getWord(String prompt) {
         System.out.println(prompt);
-        return scanner.next();
+        return scanner.nextLine();
     }
 
     public boolean yesNo(){
@@ -46,7 +46,7 @@ public class Input {
 
     public boolean yesNo(String prompt){
         System.out.println(prompt);
-        String input = scanner.next();
+        String input = scanner.nextLine();
         if(input.equalsIgnoreCase("y") || input.equalsIgnoreCase("yes")){
             return true;
         }else{
