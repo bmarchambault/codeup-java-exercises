@@ -21,7 +21,7 @@ public class Student {
  public String getStudentName (){
         return this.studentName;
  }
-
+//
     public double getGradeAverage() {
         double sum = 0;
         for (Integer grade : grade) {
