@@ -3,43 +3,51 @@ package grades;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Students {
-//    private String studentFirstName;
-//    private String studentLastName;
+public class Student {
+
     private String studentName;
-    private int grade;
-    private List<Integer> grade;
-
-//    public void Student (String studentFirstName, String studentLastName){
-//        this.studentFirstName = studentFirstName;
-//        this.studentLastName = studentLastName;
-//    }
+    protected List<Integer> grade;
 
 
-public void Student (String studentName){
-    this.studentName = studentName;
-     this.grade = new ArrayList<>();
-}
-
-//    public void addGrade(int grade){
-//        grades.add(grade);
-//    }
-//
-//    public double getGradeAverage(){
-//        double sum = 0;
-//        for(Integer grade : grades){
-//            sum += grade;
-//
-//        }
-//        return sum / grades.size();
-//    }
-
-
-    public static void main(String[] args) {
-
-
-
+    public Student(String studentName) {
+        this.studentName = studentName;
+        this.grade = new ArrayList<>();
     }
 
 
+    public void addGrade(int grade) {
+        this.grade.add(grade);
+    }
+ public String getStudentName (){
+        return this.studentName;
+ }
+
+    public double getGradeAverage() {
+        double sum = 0;
+        for (Integer grade : grade) {
+            sum += grade;
+        }
+        return sum / grade.size();
+    }
+
+//public void getGrade(){
+//    System.out.println(grade);;
+//}
+//    public static void main(String[] args) {
+//     Student s1 = new Student("Student1");
+//     s1.addGrade(78);
+//     s1.addGrade(84);
+//     s1.addGrade(90);
+//        System.out.println("Student name: " + s1.getStudentName() + "\n \t Students grades: " + s1.grade + "\n \t Students grade average: " + s1.getGradeAverage());
+//
+//
+//    }
+
 }
+
+
+
+
+
+
+
