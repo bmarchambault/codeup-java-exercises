@@ -6,7 +6,7 @@ import java.util.HashMap;
 
 public class GradesApplication {
     public static void main(String[] args) {
-
+//
         Student s1 = new Student("Student1");
         s1.addGrade(78);
         s1.addGrade(84);
