@@ -27,8 +27,8 @@ public class VehicleTest {
 
 
 //to instantiate a new object now:
-        Car c1 = new Car(false, 8, "gas", 24);
-        Jet j1 = new Jet(true, 12, "kerosene", 74_000);
+        Vehicle c1 = new Car(false, 8, "gas", 24);
+        Vehicle j1 = new Jet(true, 12, "kerosene", 74_000);
 
 //create a array of all objects, type of vehicle:
         Vehicle[] vehicles = new Vehicle[3];
