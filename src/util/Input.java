@@ -1,14 +1,13 @@
 package util;
 import java.util.Scanner;
 import java.util.jar.JarOutputStream;
-//kjfld
 //    Create a class named Input that has a private property named scanner.
 public class Input {
     private  Scanner scanner;//private property of scanner
     //   When an instance of this object (Input object) is created,
     // the scanner property should be set to a new instance of the Scanner class.
     public Input(){//constructor for input
-        this.scanner = new Scanner(System.in).useDelimiter("\n");//creates a new instance of the scanner property
+        this.scanner = new Scanner(System.in);//creates a new instance of the scanner property
     }
 
 
@@ -54,33 +53,52 @@ public class Input {
         }
     }
 
-    public int getInt(String prompt) {
-        System.out.println(prompt);
-        if (scanner.hasNextInt()) {
-            return scanner.nextInt();
-        } else {
-            System.out.println("invalid input.  Enter a valid integer.");
-            return getInt();//recurrsive.  but a loop works fine too.
-        }
-    }
+//    public int getInt(String prompt) {
+//        System.out.println(prompt);
+//        if (scanner.hasNextInt()) {
+//            return scanner.nextInt();
+//        } else {
+//            System.out.println("invalid input.  Enter a valid integer.");
+//            return getInt();//recursive.  but a loop works fine too.
+//        }
+//    }
 
 
 
+//    public int getInt() {
+////        System.out.println("Please enter a number");
+////        int userInputInt = this.scanner.nextInt();
+////        System.out.println("You entered " + userInputInt);
+////        return userInputInt;
+////        ------------------------------------
+//        if (scanner.hasNextInt()) {
+//            return scanner.nextInt();
+//        } else {
+//            System.out.println("invalid input.  Enter a valid integer.");
+//            return getInt();//recursive.  but a loop works fine too.
+//        }
+//    }
+
+
+    //USING EXCEPTION AND TRY CATCH:  ============================
     public int getInt() {
-//        System.out.println("Please enter a number");
-//        int userInputInt = this.scanner.nextInt();
-//        System.out.println("You entered " + userInputInt);
-//        return userInputInt;
-//        ------------------------------------
-        if (scanner.hasNextInt()) {
-            return scanner.nextInt();
-        } else {
-            System.out.println("invalid input.  Enter a valid integer.");
-            return getInt();//recurrsive.  but a loop works fine too.
+        try{
+            return Integer.valueOf(getString());
+        } catch (Exception e){
+            System.out.println("Invalid input.");
+            return getInt();
         }
     }
 
-
+    public double getDouble(){
+        try{
+           return Double.valueOf(getString());
+        } catch (Exception e){
+            System.out.println("Invalid input.");
+            return getDouble();
+        }
+    }
+//===========================================================================
 
     public int getInt(int min, int max) {
 //        ------my solution - worked-------------------
@@ -104,20 +122,20 @@ public class Input {
 
 
 
-    public double getDouble(){
-//        System.out.println("Please enter a decimal number");
-//        double userInputDbl = this.scanner.nextDouble();
-//        System.out.println("You entered " + userInputDbl);
-//        return userInputDbl;
-//        ----------------------------------------
-        if (scanner.hasNextDouble()){
-            return scanner.nextDouble();
-        } else{
-            System.out.println("Invalid input.  Enter a valid number.");
-            scanner.next();// clear the line for future use.
-            return getDouble();
-        }
-    }
+//    public double getDouble(){
+////        System.out.println("Please enter a decimal number");
+////        double userInputDbl = this.scanner.nextDouble();
+////        System.out.println("You entered " + userInputDbl);
+////        return userInputDbl;
+////        ----------------------------------------
+//        if (scanner.hasNextDouble()){
+//            return scanner.nextDouble();
+//        } else{
+//            System.out.println("Invalid input.  Enter a valid number.");
+//            scanner.next();// clear the line for future use.
+//            return getDouble();
+//        }
+//    }
 
 
 
@@ -151,35 +169,35 @@ public class Input {
 //       user.getDouble();
 //    }
 
-//    Instuctor testing:
+//    Instructor testing:
 //public static void main(String[] args) {
 //    Input in = new Input();//this is how you use the scanner input method.
+////
 //
-
-//    String favSentence = in.getString("Please enter your favorite sentence!");
-//    System.out.println(favSentence);
-
-//        System.out.print("Will you continue? ");
-//        boolean yesNo = in.yesNo();
-//        System.out.println(yesNo);
-
-//        System.out.print("Please enter a whole number: ");
-//        int num = in.getInt();
-//        System.out.println("You entered: " + num);
-
-//        System.out.print("Please enter a whole number between 1 and 10: ");
-//        int numInRange = in.getInt(1, 10);
-//        System.out.println("You entered " + numInRange);
-
-//        System.out.print("Please enter a number: ");
-//        double dNum = in.getDouble();
-//        System.out.println("You entered: " + dNum);
-
-//        System.out.print("Please enter a whole number between 1 and 10: ");
-//        double dNumInRange = in.getDouble(1, 10);
-//        System.out.println("You entered " + dNumInRange);
-
-
+////    String favSentence = in.getString("Please enter your favorite sentence!");
+////    System.out.println(favSentence);
+//
+////        System.out.print("Will you continue? ");
+////        boolean yesNo = in.yesNo();
+////        System.out.println(yesNo);
+//
+//    System.out.print("Please enter a whole number: ");
+//    int num = in.getInt();
+//    System.out.println("You entered: " + num);
+//
+////        System.out.print("Please enter a whole number between 1 and 10: ");
+////        int numInRange = in.getInt(1, 10);
+////        System.out.println("You entered " + numInRange);
+//
+//    System.out.print("Please enter a number: ");
+//    double dNum = in.getDouble();
+//    System.out.println("You entered: " + dNum);
+//
+////        System.out.print("Please enter a whole number between 1 and 10: ");
+////        double dNumInRange = in.getDouble(1, 10);
+////        System.out.println("You entered " + dNumInRange);
+//
+//}
 }
 //}
 //Create a package inside of src named util. Inside of util, create a class named Input that has a private property named scanner. When an instance of this object is created, the scanner property should be set to a new instance of the Scanner class. The class should have the following methods, all of which return command line input from the user:
