@@ -1,15 +1,14 @@
-package contactMrgProject;
+package contactMgrProject;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 
 public class ContactMgrApp {
     public static void main(String[] args) throws IOException {
-        Path textFile = Paths.get("src", "contacts.txt");//defines our path
+        Path textFile = Paths.get("src","contactMgrProject", "contacts.txt");//defines our path
 
 //declare variables:
         List<ContactInfo> contactInfoList;
@@ -17,13 +16,15 @@ public class ContactMgrApp {
 
     try{
         contactList = Files.readAllLines(textFile);
+        System.out.println(contactList);
     }catch (IOException e){
         e.printStackTrace();
     }
 
-    contactInfoList = ContactInfo.contactInfoToString(contactList);
-        System.out.println(contactList);
+for(String contact : contactList){
+    System.out.println(contact);
 
+}
 
 
 

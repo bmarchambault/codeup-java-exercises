@@ -89,7 +89,22 @@ public class Input {
             return getInt();
         }
     }
-
+//    instructor solution: (I tried it this way, but couldn't figure it out:
+//     public int getInt() {
+//       String userInput = getString();
+//    int userInt = Interger.valueof(userInput);
+//    return userInt;
+//    }
+//    ADDING THE TRY CATCH
+//public int getInt() {
+//       String userInput = getString();
+//   try{
+//   int userInt = Interger.valueof(userInput);
+//    return userInt;
+//    } catch(NumberFormatException e) {
+//    sout an error message;
+//    return getInt();
+//    }
     public double getDouble(){
         try{
            return Double.valueOf(getString());
