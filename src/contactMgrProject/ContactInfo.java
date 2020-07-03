@@ -1,68 +1,34 @@
-package contactMrgProject;
+package contactMgrProject;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class ContactInfo {
-    protected String name;
-//    protected String lastName;
+    protected String firstName;
+    protected String lastName;
     protected String phoneNum;
 
-//    public ContactInfo (String firstName, String lastName, String phoneNum){
-////        this.firstName = firstName;
-////        this.lastName = lastName;
-//        this.phoneNum = phoneNum;
-//    }
-
-
-    public ContactInfo(String name, String phoneNum) {
-        this.name = name;
+    public ContactInfo (String firstName, String lastName, String phoneNum){
+//        this.firstName = firstName;
+//        this.lastName = lastName;
         this.phoneNum = phoneNum;
     }
 
-    public static List<String> contactListToString(List<ContactInfo> contactInfoList){
-        List<String> contactList = new ArrayList<>();
-        for (ContactInfo contact : contactInfoList){
-            contactList.add(contact.getName());
-
-        }
-        return contactList;
+        public String getFirstName() {
+        return firstName;
     }
 
-
-
-    public static List<ContactInfo> contactInfoToString(List<String> contactList){
-        List<ContactInfo> contactStringList = new ArrayList<>();
-        for(String contact : contactList){
-//            contactList.add(String.valueOf(new ContactInfo(firstName, lastName, phoneNum )));
-            contactList.add(String.valueOf(new ContactInfo(contact, contact)));
-        }
-        return contactStringList;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
     }
 
-    public String getName() {
-        return name;
+    public String getLastName() {
+        return lastName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
-
-    //    public String getFirstName() {
-//        return firstName;
-//    }
-//
-//    public void setFirstName(String firstName) {
-//        this.firstName = firstName;
-//    }
-//
-//    public String getLastName() {
-//        return lastName;
-//    }
-//
-//    public void setLastName(String lastName) {
-//        this.lastName = lastName;
-//    }
 
     public String getPhoneNum() {
         return phoneNum;
@@ -71,4 +37,9 @@ public class ContactInfo {
     public void setPhoneNum(String phoneNum) {
         this.phoneNum = phoneNum;
     }
+
+//
+//    public static List<ContactInfo> contactInfoList(List<String>)
+
+
 }
