@@ -2,7 +2,7 @@ package consoleAdventureGame;
 
 import util.Input;
 
-public class ConsoleAdventureGame {
+public class ConsoleAdventureGameApp {
     public static void main(String[] args) {
         Input userInput = new Input();
        boolean confirmPlay;
@@ -18,7 +18,7 @@ public class ConsoleAdventureGame {
 //        System.out.println(playGame);
         if (confirmPlay) {
             Hero hero = new Hero();
-            System.out.println(hero);
+            System.out.println("What would you like to do next?  a = attack, d = drink potion, r = run");
         } else {
             System.out.println("Maybe next time");
         }
