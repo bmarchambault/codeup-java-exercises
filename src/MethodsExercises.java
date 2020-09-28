@@ -120,30 +120,24 @@ public class MethodsExercises {
             //Use static methods to implement the method(s) that generate the random numbers.
             //Use the .random method of the java.lang.Math class to generate random numbers.
 
-//public static int rollDice( int min, int max) {
-//    String response = "";
-//    int dieOne = 0;
-//    int dieTwo = 0;
-//
-//    System.out.println("Would you like to roll the die? (y/n)");
-//    response = sc.next();
-//    if (response.equalsIgnoreCase("y") || response.equalsIgnoreCase("yes")){
-//    int diceSides = getInteger(min, max);
-//        dieOne += (int)(Math.random() * diceSides) + 1;
-//
-//        dieTwo += (int)(Math.random() * diceSides) + 1;
-//
-//    }
-//    System.out.println(dieOne);
-//    System.out.println(dieTwo);
-//    return dieOne & dieOne;
-//}
+public static int rollDice( int min, int max) {
+    String response = "";
+    int dieOne = 0;
+    int dieTwo = 0;
 
-//
+    System.out.println("Would you like to roll the die? (y/n)");
+    response = sc.next();
+    if (response.equalsIgnoreCase("y") || response.equalsIgnoreCase("yes")){
+    int diceSides = getInteger(min, max);
+        dieOne += (int)(Math.random() * diceSides) + 1;
 
+        dieTwo += (int)(Math.random() * diceSides) + 1;
 
-
-
+    }
+    System.out.println(dieOne);
+    System.out.println(dieTwo);
+    return dieOne & dieOne;
+}
 
 
     }
