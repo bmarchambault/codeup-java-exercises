@@ -1,28 +1,27 @@
 package consoleAdventureGame;
 
 public class Enemy extends AdventureGame {
-    int enemyHealth = 75;
 
-    public Enemy(int enemyHealth) {
-        this.enemyHealth = enemyHealth;
-    }
 
-    public int getEnemyHealth() {
-        return enemyHealth;
-    }
+    public Enemy() {};
 
-    public void setEnemyHealth(int enemyHealth) {
-        this.enemyHealth = enemyHealth;
-    }
+
+    @Override
+    public  void attacked() {
+        System.out.println("" + herosName + " decreased enemy's health by 5 points");
+        enemysHealth = enemysHealth - attack;
+        System.out.println(enemysHealth);
+    };
 
     @Override
     public void attack() {
-        enemyHealth = enemyHealth - attack;
-        System.out.println(attack);
+
     }
 
 
-
+    public void showInfo() {
+        System.out.println("Enemy Health = " + enemysHealth);
+    }
 
     @Override
     public void drinkPotion() {
@@ -33,4 +32,10 @@ public class Enemy extends AdventureGame {
     public void run() {
 
     }
+
+    @Override
+    public void remainingHealth() {
+        System.out.println("Enemy's healh is now " + enemysHealth + ".");
+    }
+
 }
